@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Inventory Management</title>
+    <link rel="stylesheet" href="../static/css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <!-- Logo + Text -->
+        <div class="logo-inline">
+          <img src="../static/images/logo.png" alt="Logo" class="logo-icon" />
+          <span class="brand-name">InvenMa<span class="bold">G</span></span>
+        </div>
+        <p class="subtitle">Sign in to your account</p>
+
+        <!-- Form -->
+        <form id="loginForm" class="login-form">
+          <div class="input-group">
+            <span class="input-icon">👤</span>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon">🔒</span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <a href="../templates/main.html" type="submit" class="submit-btn"
+            >Sign in</a
+          >
+        </form>
+
+        <div
+          id="message"
+          style="text-align: center; color: red; margin-top: 10px"
+        ></div>
+      </div>
+
+      <footer class="footer">InventoryManagement</footer>
+    </div>
+    <script src="../static/js/login.js"></script>
+  </body>
+</html>

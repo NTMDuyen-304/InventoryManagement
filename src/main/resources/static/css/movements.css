@@ -1,0 +1,143 @@
+/* Stock movements page specific styles */
+.movement-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.movement-type.incoming {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.movement-type.outgoing {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Movement form styles */
+.movement-type-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.type-option {
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.type-option:hover {
+  border-color: #93c5fd;
+  background-color: #eff6ff;
+}
+
+.type-option.selected.incoming {
+  border-color: #059669;
+  background-color: #d1fae5;
+}
+
+.type-option.selected.outgoing {
+  border-color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.type-option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.type-option-label {
+  font-weight: 500;
+}
+
+/* Movement summary styles */
+.movement-summary {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.summary-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.summary-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.summary-value {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* Movement table styles */
+.movements-table th {
+  white-space: nowrap;
+}
+
+.movement-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.movement-product {
+  font-weight: 500;
+}
+
+.movement-quantity {
+  font-weight: 500;
+}
+
+.movement-reason {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.logo-icon {
+  color: #2563eb;
+  width: 50px;
+  height: 50px;
+  margin-bottom: -5px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none; /* ✅ THÊM DÒNG NÀY */
+}
