@@ -1,4 +1,4 @@
-package com.example.InventoryManagement.controller;
+package com.example.InventoryManagement.controller.api;
 
 import com.example.InventoryManagement.dto.InventoryLogDTO;
 import com.example.InventoryManagement.service.InventoryService;
@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/inventory")
 @CrossOrigin("*")
-public class InventoryController {
+public class InventoryApiController {
 
     @Autowired
     private InventoryService inventoryService;

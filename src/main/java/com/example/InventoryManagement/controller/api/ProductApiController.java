@@ -1,4 +1,4 @@
-package com.example.InventoryManagement.controller;
+package com.example.InventoryManagement.controller.api;
 
 import com.example.InventoryManagement.dto.ProductDTO;
 import com.example.InventoryManagement.service.ProductService;
@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/products")
 @CrossOrigin("*") // Cho phép gọi từ frontend (nếu dùng JS)
-public class ProductController {
+public class ProductApiController {
 
     @Autowired
     private ProductService productService;
