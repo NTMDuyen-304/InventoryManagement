@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Warehouse System</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Inventory Management</h1>
+      <nav>
+        <a th:href="@{/products}">Product</a> |
+        <a th:href="@{/logs}">History</a> |
+        <a th:href="@{/logout}">Log out</a>
+      </nav>
+      <hr />
+    </header>
+  </body>
+</html>
