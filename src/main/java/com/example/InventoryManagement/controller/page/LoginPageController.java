@@ -55,6 +55,6 @@ public class LoginPageController {
             return "redirect:/loginPage";
         }
         model.addAttribute("accountDTO", account);
-        return "main"; // index.html
+        return "dashboard"; 
     }
 }

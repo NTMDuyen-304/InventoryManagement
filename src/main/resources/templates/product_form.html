@@ -14,7 +14,7 @@
         th:text="${product.id != null} ? 'Edit Product' : 'Add New Product'"
       ></h2>
       <form
-        th:action="@{/products/save}"
+        th:action="@{/products}"
         th:object="${product}"
         method="post"
         id="productForm"
@@ -41,7 +41,7 @@
             required
             id="quantityInput"
           />
-          <input type="hidden" th:field="*{total}" id="totalInput" />
+          <input type="hidden" th:value="${product.total}" readonly />
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>

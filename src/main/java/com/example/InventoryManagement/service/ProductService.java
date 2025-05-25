@@ -37,4 +37,24 @@ public class ProductService {
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }
+
+    public ProductDTO createProduct(ProductDTO dto) {
+        // Đảm bảo ID là null để tránh cập nhật nhầm khi insert
+        dto.setId(null);
+        Product created = productRepository.save(ProductMapper.toEntity(dto));
+        return ProductMapper.toDTO(created);
+    }
+
+    public ProductDTO updateProduct(Long id, ProductDTO dto) {
+        return productRepository.findById(id)
+                .map(existing -> {
+                    // Cập nhật các trường cần thiết từ DTO
+                    existing.setName(dto.getName());
+                    existing.setCategory(dto.getCategory());
+                    existing.setQuantity(dto.getQuantity());
+                    Product updated = productRepository.save(existing);
+                    return ProductMapper.toDTO(updated);
+                })
+                .orElse(null);
+    }
 }

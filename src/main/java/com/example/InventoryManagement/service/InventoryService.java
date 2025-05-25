@@ -56,4 +56,28 @@ public class InventoryService {
 
         return InventoryLogMapper.toDTO(logRepository.save(log));
     }
-}
+    public InventoryLogDTO createLog(InventoryLogDTO dto) {
+    if (dto.getProductId() == null || dto.getAction() == null || dto.getAmount() == null || dto.getAmount() <= 0) {
+        throw new IllegalArgumentException("Invalid inventory log data");
+    }
+
+    String action = dto.getAction().toUpperCase();
+    Long productId = dto.getProductId();
+    int amount = dto.getAmount();
+
+    if (action.equals("IMPORT")) {
+        return importProduct(productId, amount);
+    } else if (action.equals("EXPORT")) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        if (product.getQuantity() < amount) {
+            throw new RuntimeException("Not enough stock to export");
+        }
+
+        return exportProduct(productId, amount);
+    } else {
+        throw new IllegalArgumentException("Invalid action type. Only IMPORT or EXPORT are allowed.");
+    }
+}}
+

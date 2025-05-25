@@ -12,7 +12,7 @@ public class ProductMapper {
                 product.getId(),
                 product.getName(),
                 product.getCategory(),
-                product.getQuantity()
+                product.getQuantity(), null
         );
     }
 

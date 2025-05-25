@@ -10,6 +10,14 @@ public class ProductDTO {
     private String name;
     private String category;
     private Integer quantity;
+     private Integer total; 
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
     // // Getters and setters
     // public Long getId() { return id; }
     // public void setId(Long id) { this.id = id; }
